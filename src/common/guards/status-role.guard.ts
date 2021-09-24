@@ -12,11 +12,11 @@ export class StatusRoleGuard implements CanActivate {
     const fakeUser: IUser = {
       id: 1,
       name: 'Test User',
-      role: AppRoles.USER_STATUS_INPROGRESS
+      role: AppRoles.USER_COMPLETE_STATUS
     };
 
-    request.user = fakeUser;
-    return this.validateStatusRequest(request);
+    request.body.user = fakeUser;
+    return this.validateStatusRequest(request.body);
   }
 
   private validateStatusRequest(request: IStatusUpdateDto) {

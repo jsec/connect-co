@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { ICustomerResponse } from '../interfaces/customer-response.interface';
+import { ICustomerResponse } from '../../interfaces/customer-response.interface';
 import { IDb1Record } from './interfaces/db1.interface';
 
 /**

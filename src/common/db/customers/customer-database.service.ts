@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { ICustomerResponse } from '../interfaces/customer-response.interface';
+import { ICustomerResponse } from '../../interfaces/customer-response.interface';
 import { Db1Client } from './db1.client';
 import { Db2Client } from './db2.client';
 
 @Injectable()
-export class DatabaseService {
+export class CustomerDatabaseService {
   constructor(private _db1Client: Db1Client, private _db2Client: Db2Client) {}
 
   public async getCustomerById(id: string): Promise<ICustomerResponse> {
